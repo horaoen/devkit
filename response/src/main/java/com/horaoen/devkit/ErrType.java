@@ -1,2 +1,7 @@
-package com.horaoen.devkit;public enum ErrType {
+package com.horaoen.devkit;
+
+public interface ErrType {
+    Integer getCode();
+    
+    String getErrMsg();
 }

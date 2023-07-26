@@ -2,16 +2,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.horaoen.devkit</groupId>
+        <groupId>com.horaoen</groupId>
         <artifactId>devkit</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${reversion}</version>
     </parent>
 
     <artifactId>devkit-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 
     <name>devkit-spring-boot-starter</name>
-    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,5 +23,18 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.horaoen.devkit</groupId>
+            <artifactId>exception</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+    
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>horaoen</name>
+            <url>https://maven.pkg.github.com/horaoen/devkit</url>
+        </repository>
+    </distributionManagement>
 </project>
