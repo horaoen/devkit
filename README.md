@@ -1,2 +1,2 @@
 # devkit
-personal devlopement kits for springboot
+personal development kits for springboot

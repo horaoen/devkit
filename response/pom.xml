@@ -4,10 +4,9 @@
     <parent>
         <groupId>com.horaoen</groupId>
         <artifactId>devkit</artifactId>
-        <version>${reversion}</version>
+        <version>1.0.1</version>
     </parent>
 
-    <version>${reversion}</version>
     <artifactId>response</artifactId>
     <packaging>jar</packaging>
 

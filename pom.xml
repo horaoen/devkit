@@ -6,11 +6,10 @@
     <artifactId>devkit</artifactId>
     <packaging>pom</packaging>
     <name>devkit</name>
-    <version>${reversion}</version>
+    <version>1.0.1</version>
     <description>personal development kit for springboot</description>
 
     <properties>
-        <reversion>0.0.1-SNAPSHOT</reversion>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <lombok.version>1.18.28</lombok.version>
