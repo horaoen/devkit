@@ -5,6 +5,10 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 
 @AutoConfiguration
-@ConditionalOnProperty(name = "devkit.exception.enabled")
+@ConditionalOnProperty(prefix = "devkit", name = "exception.enabled", matchIfMissing = true)
 public class ExceptionHandlerAutoConfiguration {
+    @Bean
+    public MyBean myBean() {
+        return new MyBean();
+    }
 }
