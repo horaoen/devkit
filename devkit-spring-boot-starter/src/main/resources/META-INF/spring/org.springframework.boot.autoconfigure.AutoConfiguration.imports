@@ -1,0 +1,2 @@
+com.horaoen.devkit.exception.GlobalExceptionHandler
+com.horaoen.devkit.boot.ExceptionHandlerAutoConfiguration
