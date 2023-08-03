@@ -6,20 +6,21 @@
     <artifactId>devkit</artifactId>
     <packaging>pom</packaging>
     <name>devkit</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>personal development kit for springboot</description>
-
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.6</version>
+    </parent>
+    
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <lombok.version>1.18.28</lombok.version>
         <junit.version>5.10.0</junit.version>
         <hutool.version>5.8.16</hutool.version>
         <mockito.version>5.4.0</mockito.version>
-        <slf4j.version>2.0.7</slf4j.version>
-        <log4j.version>2.20.0</log4j.version>
-        <spring.version>6.0.6</spring.version>
-        <springboot.version>3.1.0</springboot.version>
     </properties>
 
     <dependencies>
@@ -32,7 +33,11 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -50,28 +55,6 @@
                 <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-autoconfigure</artifactId>
-                <version>${springboot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-test</artifactId>
-                <version>${springboot.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${springboot.version}</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

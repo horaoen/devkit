@@ -4,13 +4,13 @@ import cn.hutool.http.HttpStatus;
 
 public class Result {
     public static <T> UnifiedResponse<T> ok(T data) {
-        UnifiedResponse<T> response = new UnifiedResponse<T>();
+        UnifiedResponse<T> response = new UnifiedResponse<>();
         response.setSuccess(true);
         response.setData(data);
         response.setCode(HttpStatus.HTTP_OK);
         return response;
     }
-    
+
     public static UnifiedResponse<?> error(String errMsg) {
         UnifiedResponse<?> response = new UnifiedResponse<>();
         response.setSuccess(false);
@@ -27,6 +27,14 @@ public class Result {
         response.setSuccess(false);
         response.setCode(errType.getCode());
         response.setErrMsg(errType.getErrMsg());
+        return response;
+    }
+    
+    public static UnifiedResponse<?> exception(Exception ex, Integer code) {
+        UnifiedResponse<?> response = new UnifiedResponse<>();
+        response.setSuccess(false);
+        response.setCode(code);
+        response.setErrMsg(ex.getMessage());
         return response;
     }
 }
