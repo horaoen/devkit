@@ -6,7 +6,7 @@
     <artifactId>devkit</artifactId>
     <packaging>pom</packaging>
     <name>devkit</name>
-    <version>1.0.2</version>
+    <version>0.0.4-SNAPSHOT</version>
     <description>personal development kit for springboot</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -60,12 +60,16 @@
     </dependencyManagement>
 
     <modules>
-        <module>response</module>
-        <module>exception</module>
-        <module>logging</module>
         <module>devkit-spring-boot-starter</module>
+        <module>devkit-core</module>
     </modules>
-
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>horaoen</name>
+            <url>https://maven.pkg.github.com/horaoen/devkit</url>
+        </repository>
+    </distributionManagement>
     <build>
     </build>
 </project>
