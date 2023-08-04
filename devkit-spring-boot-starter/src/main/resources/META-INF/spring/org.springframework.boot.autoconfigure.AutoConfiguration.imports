@@ -1,1 +1,2 @@
 com.horaoen.devkit.autoconfigure.ExceptionHandlerAutoConfiguration
+com.horaoen.devkit.autoconfigure.UnifiedResponseAutoConfiguration

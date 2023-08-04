@@ -1,14 +1,15 @@
 package com.horaoen.devkit;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter(AccessLevel.PROTECTED)
-@Setter(AccessLevel.PROTECTED)
+import java.io.Serializable;
+
+@Getter
+@Setter
 @ToString
-public class UnifiedResponse<T> {
+public class UnifiedResponse<T> implements Serializable {
     private boolean success;
     
     private T data;

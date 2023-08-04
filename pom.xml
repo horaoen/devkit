@@ -6,7 +6,7 @@
     <artifactId>devkit</artifactId>
     <packaging>pom</packaging>
     <name>devkit</name>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5</version>
     <description>personal development kit for springboot</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,8 +21,17 @@
         <junit.version>5.10.0</junit.version>
         <hutool.version>5.8.16</hutool.version>
         <mockito.version>5.4.0</mockito.version>
+        <fastjson.version>2.0.17</fastjson.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>horaoen</name>
+            <url>https://maven.pkg.github.com/horaoen/devkit</url>
+        </repository>
+    </repositories>
+    
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -55,6 +64,11 @@
                 <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
